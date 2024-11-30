@@ -1,0 +1,43 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%MyCompany%
+DriverVer=11/22/2024,1.0.0.0
+CatalogFile=MyDriver1.cat
+
+[Manufacturer]
+%MyCompany%=MyDriver1_Models,NTamd64
+
+[MyDriver1_Models.NTamd64]
+%MyDriver1.DeviceDesc%=MyDriver1_Install, Root\MyDriver1
+
+[MyDriver1_Install]
+CopyFiles=MyDriver1_CopyFiles
+
+[MyDriver1_Install.Services]
+AddService=MyDriver1,0x00000002,MyDriver1_ServiceInstall
+
+[MyDriver1_CopyFiles]
+MyDriver1.sys
+
+[DestinationDirs]
+DefaultDestDir=12   ; DIRID_DRIVERS
+
+[MyDriver1_ServiceInstall]
+DisplayName   = "MyDriver1 Service"
+ServiceType   = 1               ; Kernel driver
+StartType     = 3               ; Manual start
+ErrorControl  = 1               ; Normal error control
+ServiceBinary = %12%\MyDriver1.sys
+
+[SourceDisksFiles]
+MyDriver1.sys=1
+
+[SourceDisksNames]
+1=%DiskName%,,,\
+
+[Strings]
+MyDriver1.DeviceDesc="MyDriver1 Device"
+MyCompany="J"
+DiskName="Installation Disk"

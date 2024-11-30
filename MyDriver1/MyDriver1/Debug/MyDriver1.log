@@ -1,0 +1,21 @@
+﻿  Building 'MyDriver1' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping Debug\MyDriver1.inf [Version] section with DriverVer=11/21/2024,14.15.20.704
+  PTE_Eraser.cpp
+  MyDriver1.vcxproj -> C:\Users\User\source\repos\MyDriver1\Debug\MyDriver1.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\User\source\repos\MyDriver1\Debug\MyDriver1.sys
+  
+  ........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\User\source\repos\MyDriver1\Debug\MyDriver1\mydriver1.cat
+  Done Adding Additional Store
+  Successfully signed: C:\Users\User\source\repos\MyDriver1\Debug\MyDriver1\mydriver1.cat
+  
